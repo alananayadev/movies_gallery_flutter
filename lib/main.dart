@@ -25,7 +25,7 @@ class MovieGalleryApp extends StatelessWidget {
           child: GridView.count(
             crossAxisCount: 2,
             childAspectRatio: 2/3,
-            children: List.generate(9, (index) =>
+            children: List.generate(100, (index) =>
                 Card(
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
@@ -46,7 +46,7 @@ class MovieGalleryApp extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: NetworkImage('https://m.media-amazon.com/images/M/MV5BM2QyNDIzOGMtNThhNS00NmUwLWI0ZjUtZjdkN2I1OTRjZWQ3XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg'),
+                                image: NetworkImage('https://m.media-amazon.com/images/M/MV5BYWZlOGMzOWItYmU0MS00ZWU2LWEzOWItZTAxMDdlNTNjNjE1XkEyXkFqcGdeQXVyMzI2Mjc1NjQ@._V1_FMjpg_UX1000_.jpg'),
                               fit: BoxFit.cover
                             ),
                             borderRadius: BorderRadius.vertical(
@@ -61,15 +61,14 @@ class MovieGalleryApp extends StatelessWidget {
                                     right: 0,
                                     left: 0,
                                     child: Container(
-                                      padding: EdgeInsets.all(5.0),
                                       child: ClipRect(
                                         child: BackdropFilter(
-                                          filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+                                          filter: ImageFilter.blur(sigmaX: 12.0, sigmaY: 12.0),
                                           child: Container(
                                             height: 50,
                                             color: Colors.black54,
                                             child: Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                                              padding: const EdgeInsets.only(left: 8.0, top: 5.0),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
@@ -127,7 +126,7 @@ class MovieGalleryApp extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Mr. Robot $index',
+                              'Shoujo Kageki Revue $index',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
